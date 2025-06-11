@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Template Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div style="max-width:800px;margin:auto;padding:20px;">
+    <a href="index.html" style="text-decoration:none;">← Back to Store</a>
+    <h1 id="title">Loading...</h1>
+    <img id="img" src="" alt="" style="width:100%;max-width:500px;border-radius:8px;margin:20px 0;">
+    <p id="date"></p>
+    <p id="price"></p>
+    <p>📧 Contact: <a href="mailto:beba128242005@gmail.com">beba128242005@gmail.com</a></p>
+    <p>Contact to buy this template.</p>
+  </div>
+  <script src="data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const template = getTemplateById(id);
+
+    if(template){
+      document.getElementById('title').textContent = template.title;
+      document.getElementById('img').src = `images/i${template.id}.jpg`;
+      document.getElementById('img').alt = template.title;
+      document.getElementById('date').textContent = "📅 Date: " + template.date;
+      document.getElementById('price').textContent = "💲 Price: $" + template.price;
+    }else{
+      document.querySelector('body').innerHTML = '<p>Template not found.</p>';
+    }
+  </script>
+</body>
+</html>

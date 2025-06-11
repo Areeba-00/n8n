@@ -1,0 +1,202 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #374151;
+}
+header p {
+  color: #6b7280;
+}
+
+/* Category buttons */
+#categories {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cat-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 0 10px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.cat-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+/* Template grid */
+#templates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Template card */
+.template-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.template-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.template-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.template-item div {
+  padding: 15px;
+}
+.template-item p {
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+/* Hidden section */
+.hidden {
+  display: none;
+}
+
+/* Buttons inside other sections */
+button {
+  background: #374151;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #1f2937;
+}
+
+/* Template detail section */
+#template-details img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Wrapper for lists and details */
+#template-list,
+#details {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .template-item img {
+    height: 120px;
+  }
+}
+
+/* === HOMEPAGE BACKGROUND STYLING === */
+#homepage {
+  background: url("images/black.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay using gradient */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  z-index: 1;
+}
+
+/* Main text and button container */
+.hero-content {
+  position: relative;
+  z-index: 2; /* above overlay */
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Title styling */
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Button group for categories */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Adjust category button size and style */
+.button-group .cat-btn {
+  padding: 14px 30px;
+  font-size: 1.2rem;
+}
+
+body {
+  background-image: url('black.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  color: white; /* optional: ensures text is readable on a dark background */
+}
+
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}

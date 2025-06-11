@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <!-- no change to scripts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>n8n Templates Store</title>
+</head>
+<body>
+  <div class="center-wrapper">
+    <h1 style="margin-bottom:20px;">Welcome to n8n Template Store</h1>
+    <div id="categories">
+      <button class="cat-btn" data-cat="video">Faceless Video Automation</button>
+      <button class="cat-btn" data-cat="social">Social Media Automation</button>
+    </div>
+    <div id="template-list" class="hidden">
+      <button id="back-to-cats">← Back to Categories</button>
+      <div id="templates-container" class="scroll-container"></div>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
